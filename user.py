@@ -20,7 +20,7 @@ class User:
         '''
         User.user_list.remove(self)
 
-        @classmethod
+    @classmethod
     def display_account(cls):
         '''
         returns the user list

@@ -19,9 +19,14 @@ def del_account(account):
     funcion to delete account
     '''
     account.delete_account()
-def main():
 
-    print("Hello welcome to Your password locker.What is your name?")
+def display_account():
+    '''
+    returns all saved accounts
+    '''
+    return User.display_account()
+def main():
+    print("Welcome to Your password locker.What is your name?")
     username = input()
 
     print(f"Hello {username}. What would you like to do?")
@@ -39,14 +44,21 @@ def main():
             print('\n')
             print(f"new Account {username} {password} created")
             print('\n')
-if __name__=='__main__':
-    main()
 
-    elif short_code == 'da':
+
+        elif short_code == 'da':
+
             if display_account():
                 print("Here is a list of all your accounts and passwords")
                 print('\n')
                 for account in display_account():
                     print(f"{account.username} {account.password}")
                     print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have any account saved yet")
+                print('\n')
+
+if __name__=='__main__':
+    main()
 
