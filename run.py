@@ -23,7 +23,7 @@ def main():
 
     print("Hello welcome to Your password locker.What is your name?")
     username = input()
-    
+
     print(f"Hello {username}. What would you like to do?")
     print('\n')
     while True:
@@ -41,4 +41,12 @@ def main():
             print('\n')
 if __name__=='__main__':
     main()
+
+    elif short_code == 'da':
+            if display_account():
+                print("Here is a list of all your accounts and passwords")
+                print('\n')
+                for account in display_account():
+                    print(f"{account.username} {account.password}")
+                    print('\n')
 
