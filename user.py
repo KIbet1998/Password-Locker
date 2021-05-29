@@ -1,5 +1,5 @@
 class User:
-        '''
+    '''
     class that generates new instace of user
     '''
     def __init__(self,username,password):
@@ -9,7 +9,7 @@ class User:
         self.username = username
         self.password = password
     user_list = []
-     def save_account(self):
+    def save_account(self):
         '''
         save_account method saves a new user objects to the user list
         '''
