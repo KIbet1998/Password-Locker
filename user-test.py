@@ -28,3 +28,25 @@ class TestUser(unittest.TestCase):
         '''
         it cleans up after each testcase has run
         '''
+         User.user_list = []
+    def test_display_account(self):
+        '''
+        returns the list of all saved accounts
+        '''
+        self.assertEqual(User.display_account(),User.user_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
