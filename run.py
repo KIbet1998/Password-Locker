@@ -32,7 +32,7 @@ def main():
     print(f"Hello {username}. What would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes: ca - create a new account,da - display account, fa - find contact, ex - exit password locker,del - delete account")
+        print("Use these short codes: ca - create a new account,da - display account,lg - login, ex - exit password locker,del - delete account")
         short_code = input().lower()
         # print('\n')
         if short_code == 'ca':
@@ -102,6 +102,7 @@ def main():
                 default_password = input()
             else:
                 print('Login success')
+        
 
         elif short_code == 'ex':
             print("Thank you for chosing us")
