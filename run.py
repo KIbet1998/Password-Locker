@@ -59,6 +59,11 @@ def main():
                 print("You dont seem to have any account saved yet")
                 print('\n')
 
+        elif short_code == 'ex':
+            print("Thank you for chosing us")
+            break
+        else:print("Kindly use short codes")
+
 if __name__=='__main__':
     main()
 
