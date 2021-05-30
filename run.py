@@ -86,6 +86,22 @@ def main():
                 print('\n')
                 print("You dont seem to have any account saved ")
                 print('\n')
+        elif short_code =='lg':
+            print("Welcome")
+            print("Enter username")
+            default_username = input()
+            print("Enter password")
+            default_password = input()
+            print("\n")
+            while default_username != 'newuser' or default_password != '12345':
+                print("Wrong username or password use username newuser and password 12345 to login")
+                print("\n")
+                print("Enter Username")
+                default_username =input()
+                print("Enter password")
+                default_password = input()
+            else:
+                print('Login success')
 
         elif short_code == 'ex':
             print("Thank you for chosing us")
