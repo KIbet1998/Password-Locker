@@ -36,10 +36,23 @@ def main():
         short_code = input().lower()
         # print('\n')
         if short_code == 'ca':
-            print("New User")
+            print("Create new User")
             username =input()
-            print("New password")
+            print("Create password")
             password = input()
+
+            print('Confirm password')
+            confirm_password =input()
+            while confirm_password !=password:
+                print("Passwords did not match")
+                print("Enter your password")
+                password = input()
+                print("confirm password")
+                confirm_password = input()
+            else:
+                print(f"Congratulations {username} account created successfully")
+                print("\n")
+
             save_accounts(create_accounts(username,password))
             print('\n')
             print(f"new Account {username} {password} created")
@@ -50,19 +63,28 @@ def main():
             entered_username = input()
             print("Your password")
             entered_password = input()
+            while entered_username != username or entered_password != password:
+                  print("Invalid username or password")
+                  print("username")
+                  username = input()
+                  print("password")
+                  password = input()
+            else:
+                print("\n")
+                print("login successfull")
 
 
         elif short_code == 'da':
 
             if display_account():
-                print("Here is a list of all your accounts and passwords")
+                print("Here is a list of your accounts and passwords")
                 print('\n')
                 for account in display_account():
                     print(f"{account.username} {account.password}")
                     print('\n')
             else:
                 print('\n')
-                print("You dont seem to have any account saved yet")
+                print("You dont seem to have any account saved ")
                 print('\n')
 
         elif short_code == 'ex':
