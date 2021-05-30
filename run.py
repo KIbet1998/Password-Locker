@@ -45,6 +45,12 @@ def main():
             print(f"new Account {username} {password} created")
             print('\n')
 
+            print("Welcome,Proceed to login")
+            print("username")
+            entered_username = input()
+            print("Your password")
+            entered_password = input()
+
 
         elif short_code == 'da':
 
