@@ -6,34 +6,37 @@ class TestUser(unittest.TestCase):
     Args:
          unnitest.Testcase:Testcase class that helps in creating test cases
     '''
-       def setUp(self):
+    def setUp(self):
         '''
         Set up method to run before a test case
         '''
-        self.new_user = User('faith','1234')
+        self.new_user = User('Brian','1234')
     def test_init(self):
         '''
         test case to test if the object is initialized properly
         '''
-                self.assertEqual(self.new_user.username,'faith')
-        self.assertEqual(self.new_user,'password')
+        self.assertTrue(self.new_user.username,'Brian')
+        self.assertTrue(self.new_user,'password')
     def test_save_accounts(self):
         '''
         to test if the account is saved
         '''
         self.new_user.save_account()
-        self.assertEqual(len(User.user_list))
+        self.assertTrue(len(User.user_list))
 
-        def tearDown(self):
+    def tearDown(self):
         '''
         it cleans up after each testcase has run
         '''
-         User.user_list = []
+        User.user_list = []
     def test_display_account(self):
         '''
         returns the list of all saved accounts
         '''
         self.assertEqual(User.display_account(),User.user_list)
+
+if __name__ == '__main__':
+    unittest.main()
 
 
 

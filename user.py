@@ -14,11 +14,15 @@ class User:
         save_account method saves a new user objects to the user list
         '''
         User.user_list.append(self)
-    def delete_account(self):
+    @classmethod
+    def delete_account(self,username):
         '''
         deletes saved account
         '''
-        User.user_list.remove(self)
+        for user in User.user_list:
+            if user.username == username:
+
+                User.user_list.remove(user)
 
     @classmethod
     def display_account(cls):

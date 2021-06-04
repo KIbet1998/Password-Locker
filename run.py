@@ -102,12 +102,20 @@ def main():
                 default_password = input()
             else:
                 print('Login success')
+
+        elif short_code == 'del':
+            print('Enter the username to delete')
+            username = input()
+            User.delete_account(username)
+            print("Account deleted successfully")
         
 
         elif short_code == 'ex':
             print("Thank you for chosing us")
             break
         else:print("Kindly use short codes")
+
+       
 
 if __name__=='__main__':
     main()
